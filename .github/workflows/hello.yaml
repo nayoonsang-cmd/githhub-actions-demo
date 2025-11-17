@@ -12,4 +12,10 @@ jobs:
         run: echo "Hello from ${COURSE}!"
       - run: echo "i'll list files"
       - run: ls -al
+  goodbye:
+    needs: greet
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Gooodvye ${COURSE}"
+      - run: ls -al
       
